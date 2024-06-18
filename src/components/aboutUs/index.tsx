@@ -17,7 +17,7 @@ export default function AboutUs() {
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-5' >
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5' >
                 <div className='text-gray-600' data-aos="fade-up" data-aos-delay="150">
                     <p className='mb-3'>We are Akeshya, a firm that specializes in web design and marketing. We help transform ideas into reality with a team of passionate graphic designers, web developers, and seasoned marketing advisors.</p>
                     <p className='mb-3 flex items-center'><span className='text-[#14279b] text-xl mr-2'><RiCheckDoubleLine /></span>We started with a simple idea: do what is best for the client.</p>

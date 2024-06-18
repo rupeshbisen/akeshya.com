@@ -14,7 +14,7 @@ export default function Services() {
             </div>
 
             <div>
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
                     {
                         service.map(item => (
                             <div key={item.id} className='group icon-box  text-gray-600 hover:text-white shadow-xl rounded-lg p-6' data-aos="fade-up" data-aos-delay="100">

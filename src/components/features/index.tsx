@@ -13,7 +13,7 @@ export default function Features() {
                 <p className='text-gray-600'>Akeshya is a forward-thinking and intelligent design firm that is technically and creatively capable of transforming your brand into its best digital self. Our approach to design and development results in compelling, engaging branding and immersive digital experiences that provide a value for money.</p>
             </div>
 
-            <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-8 mt-9'  data-aos="fade-up" data-aos-delay="300">
+            <div className='grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-8 mt-9'  data-aos="fade-up" data-aos-delay="300">
                 {
                     features.map(item => (
                         <div key={item.id} className='bg-gray-100 flex items-center hover:bg-green-100 h-20 p-4 rounded-sm'>
