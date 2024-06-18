@@ -32,7 +32,7 @@ export default function Navbar() {
 
     return (
         <div className={`text-[#14279b] bg-white w-full fixed transition-all duration-500 py-5 ${isScrolled ? 'header-scrolled' : ''} z-10`}>
-            <nav className={`max-w-screen-xl mx-auto pt-2`}>
+            <nav className={`max-w-screen-xl mx-auto pt-2 px-3 xl:px-0`}>
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
                     <a href="/" className="flex items-center">
                         <Image src={Logo} alt='Logo' height={60} />

@@ -6,7 +6,7 @@ import { heroScrollImage } from '@/utils'
 export default function HeroSection() {
     return (
         <div className='w-full'>
-            <div id='hero' className='max-w-screen-xl mx-auto py-4 px-4 md:px-0'>
+            <div id='hero' className='max-w-screen-xl mx-auto py-4 px-4 xl:px-0'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-5 items-center'>
                     <div className='order-2 md:order-1'>
                         <h1 className='text-heading text-[#14279b] font-bold' data-aos="fade-up">Grow your business with Akeshya</h1>
@@ -19,19 +19,21 @@ export default function HeroSection() {
                         </button>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="200" className='order-1 md:order-2'>
-                        <Image src={Hero} alt='hero image' className='animate-up-down' />
+                        <Image src={Hero} alt='hero image' className='md:animate-up-down' />
                     </div>
                 </div>
             </div>
 
-            <div className='flex flex-wrap items-center justify-evenly md:px-16 mt-7 mb-14 bg-green-100 w-full py-6'>
-                {
-                    heroScrollImage.map(item => (
-                        <div key={item.id}>
-                            <Image src={item.path} alt={item.alt} width={100} height={100} className='md:mx-6 grayscale hover:grayscale-0' data-aos="zoom-in" />
-                        </div>
-                    ))
-                }
+            <div className=' w-full bg-green-100 '>
+                <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 items-center md:px-16 mt-7 mb-14 max-w-screen-xl mx-auto py-6'>
+                    {
+                        heroScrollImage.map(item => (
+                            <div key={item.id} className='flex justify-center'>
+                                <Image src={item.path} alt={item.alt} width={100} height={100} className='md:mx-6 grayscale hover:grayscale-0' data-aos="zoom-in" />
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )

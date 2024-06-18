@@ -8,7 +8,7 @@ import { RiCheckDoubleLine } from "react-icons/ri";
 
 export default function AboutUs() {
     return (
-        <div className='max-w-screen-xl mx-auto py-4 px-4 md:px-0'>
+        <div className='max-w-screen-xl mx-auto py-4 px-4 xl:px-0'>
             <div data-aos="fade-up">
                 <div className='text-3xl flex items-center justify-center font-light text-[#14279b] mb-9'>
                     <div className='h-[2px] w-12 m-3 bg-[#14279b]' />
