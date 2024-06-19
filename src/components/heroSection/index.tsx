@@ -2,8 +2,10 @@ import Image from 'next/image'
 import React from 'react'
 import Hero from '../../../public/assest/hero-img.png'
 import { heroScrollImage } from '@/utils'
+import { useRouter } from 'next/navigation'
 
 export default function HeroSection() {
+    const router = useRouter();
     return (
         <div className='w-full'>
             <div id='hero' className='max-w-screen-xl mx-auto py-4 px-4 xl:px-0'>
@@ -14,6 +16,7 @@ export default function HeroSection() {
                         <button
                             className='text-[#14279b] hover:text-white hover:bg-[#14279b] px-8 py-2 border-2 border-[#14279b] rounded-full mt-9'
                             data-aos="fade-up" data-aos-delay="800"
+                            onClick={() => router.push('/#aboutus')}
                         >
                             Get Started
                         </button>

@@ -4,9 +4,11 @@ import Logo from '../../../public/assest/logo.png'
 import { navOption } from '@/utils';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 
 export default function Navbar() {
+    const router = useRouter();
     const [navClick, setNavClick] = useState<boolean>(false);
 
     const onMenuClick = () => {
@@ -31,9 +33,9 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className={`text-[#14279b] bg-white w-full fixed transition-all duration-500 py-5 ${isScrolled ? 'header-scrolled' : ''} z-10`}>
-            <nav className={`max-w-screen-xl mx-auto pt-2 px-3 xl:px-0`}>
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
+        <div className={`text-[#14279b] bg-white w-full fixed transition-all duration-500 md:py-5 ${isScrolled ? 'header-scrolled' : ''} z-10 ${navClick ? 'h-full !p-0' : ''}`}>
+            <nav className={`max-w-screen-xl mx-auto pt-2 px-3 xl:px-0 ${navClick ? 'backdrop-contrast-0 h-full' : ''}`}>
+                <div className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto`}>
                     <a href="/" className="flex items-center">
                         <Image src={Logo} alt='Logo' height={60} />
                         <h1 className='text-3xl font-bold uppercase'>Akeshya</h1>
@@ -55,21 +57,24 @@ export default function Navbar() {
                         }
                     </button>
 
-                    <div className={`items-center justify-between w-full md:flex md:w-auto ${navClick ? '' : 'hidden'}`} id="navbar-user">
+                    <div className={`items-center justify-between w-full md:flex md:w-auto ${navClick ? 'h-[87vh] rounded-md bg-white' : 'hidden'}`} id="navbar-user">
                         <ul className={`flex flex-col font-medium p-4 md:p-0 mt-4  md:flex-row md:space-x-2  md:mt-0 md:border-0 `}>
                             {navOption.map(item => (
                                 <li key={item.id}>
                                     <Link href={item.path}
                                         key={item.id}
                                         onClick={() => { onMenuClick() }}
-                                        className="block text-sm py-2 pl-3 pr-3 font-light rounded text-gray-600 hover:text-blue-900"
+                                        className="block text-sm py-2 pl-3 pr-3 font-light rounded text-gray-600 hover:text-blue-900 active:text-blue-900"
                                     >
                                         {item.lable}
                                     </Link>
                                 </li>
                             ))}
-                            <button className='bg-[#14279b] hover:bg-[#57aae1] px-5 py-2 text-white rounded-full'>
-                                <Link href='/contact' >Contact us</Link>
+                            <button
+                                className='bg-[#14279b] hover:bg-[#57aae1] px-5 py-2 mt-4 md:mt-0 text-white rounded-full'
+                                onClick={() => { router.push('/contactus'); onMenuClick() }}
+                            >
+                                Contact us
                             </button>
                         </ul>
                     </div>

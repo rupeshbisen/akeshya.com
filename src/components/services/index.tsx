@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Services() {
     return (
-        <div className='max-w-screen-xl mx-auto p-7 md:p-4'>
+        <div id='services' className='max-w-screen-xl mx-auto p-7 md:p-4'>
             <div className='text-center mb-9 mt-20' data-aos="fade-up">
                 <div className='text-3xl font-light text-[#14279b] mb-5 flex items-center justify-center'>
                     <div className='h-[2px] w-12 m-3 bg-[#14279b]' />

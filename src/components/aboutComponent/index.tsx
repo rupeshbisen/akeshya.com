@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import About from '../../../public/assest/counts-img.svg'
 import { BsGlobe } from "react-icons/bs";
@@ -5,16 +6,16 @@ import { BsEmojiSmile, BsJournalRichtext } from "react-icons/bs";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import NumberTicker from '@/commonComponents/NumberTicker';
 import { RiCheckDoubleLine } from "react-icons/ri";
+import { useRouter } from 'next/navigation';
 
-export default function AboutUs() {
+export default function AboutComponent() {
+    const router = useRouter();
     return (
-        <div className='max-w-screen-xl mx-auto py-4 px-4 xl:px-0'>
-            <div data-aos="fade-up">
-                <div className='text-3xl flex items-center justify-center font-light text-[#14279b] mb-9'>
-                    <div className='h-[2px] w-12 m-3 bg-[#14279b]' />
-                    <h1 className='text-gray-900 font-bold'>ABOUT US</h1>
-                    <div className='h-[2px] w-12 m-3 bg-[#14279b]' />
-                </div>
+        <div id='aboutus' className='max-w-screen-xl mx-auto py-4 px-4 xl:px-0'>
+            <div className='text-3xl flex items-center justify-center font-light text-[#14279b] mb-9' data-aos="fade-up">
+                <div className='h-[2px] w-12 m-3 bg-[#14279b]' />
+                <h1 className='text-gray-900 font-bold'>ABOUT US</h1>
+                <div className='h-[2px] w-12 m-3 bg-[#14279b]' />
             </div>
 
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5' >
@@ -26,12 +27,12 @@ export default function AboutUs() {
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300">
                     <p className='text-gray-600'>We&apos;re professional, but we&apos;re also friendly, and we&apos;ll always pay attention to your concerns. We expect to work with innovative people that have an open mind and are dedicated to making every idea a reality. We want to hear from you if you&apos;re interested in SEO, have Web Development ideas, or require a graphic designer who can match your goals.</p>
-                    <button className='text-[#14279b] hover:text-white hover:bg-[#14279b] px-8 py-2 border-2 border-[#14279b] rounded-full mt-8'>Learn more</button>
+                    <button className='text-[#14279b] hover:text-white hover:bg-[#14279b] px-8 py-2 border-2 border-[#14279b] rounded-full mt-8' onClick={() => router.push('/#services')}>Learn more</button>
                 </div>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-10 mt-16 items-center'>
-                <div className='md:col-span-4' data-aos="fade-right" data-aos-delay="150">
+                <div className='sm:col-span-10 md:col-span-4' data-aos="fade-right" data-aos-delay="150">
                     <Image src={About} alt='this is image' />
                 </div>
                 <div className='md:col-span-3 md:ml-6' data-aos="fade-left" data-aos-delay="300">

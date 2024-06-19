@@ -2,9 +2,9 @@ import React from 'react'
 import { LuMapPin } from "react-icons/lu";
 import { RiMailSendLine, RiPhoneLine } from "react-icons/ri";
 
-export default function ContactUs() {
+export default function ContactComponent() {
     return (
-        <div className='max-w-screen-xl mx-auto p-4 text-sm'>
+        <div id='contact' className='max-w-screen-xl mx-auto p-4 text-sm'>
             <div data-aos="fade-up">
                 <div className='text-3xl flex items-center justify-center text-[#14279b] mb-11 font-light'>
                     <div className='h-[2px] w-12 m-3 bg-[#14279b]' />
@@ -14,7 +14,7 @@ export default function ContactUs() {
             </div>
 
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 mb-12' >
-                <div className='lg:col-span-4 md:col-span-6'  data-aos="fade-up " data-aos-delay="100 ">
+                <div className='lg:col-span-4 md:col-span-6' data-aos="fade-up " data-aos-delay="100 ">
                     <h2 className='text-[#14279b] text-3xl mb-2 font-semibold'>Akeshya</h2>
                     <p className='text-gray-500'>Designers, developers & marketeers capable of delivering solutions according to your needs,</p>
                 </div>
@@ -33,15 +33,17 @@ export default function ContactUs() {
                     </div>
                 </div>
                 <div className='lg:col-span-5 md:col-span-12' data-aos="fade-up " data-aos-delay="300">
-                    <div>
-                        <input type='text' className='w-full p-3 border mb-4' placeholder='Your Name' />
-                        <input type='email' className='w-full p-3 border mb-4' placeholder='Your Email' />
-                        <input type='text' className='w-full p-3 border mb-4' placeholder='Subject' />
-                        <textarea rows={5} className='w-full p-3 border mb-4' placeholder='Message' />
-                    </div>
-                    <div className='flex justify-center'>
-                        <button className='bg-[#14279b] hover:bg-[#57aae1] text-white py-3 px-5 text-base rounded-full' >Send Message</button>
-                    </div>
+                    <form className='php-email-form' method='POST' name='contact'><input type='hidden' name='form-name' value='contact' />
+                        <div>
+                            <input type='text' className='w-full p-3 border mb-4' placeholder='Your Name' required />
+                            <input type='email' className='w-full p-3 border mb-4' placeholder='Your Email' required />
+                            <input type='text' className='w-full p-3 border mb-4' placeholder='Subject' required />
+                            <textarea rows={5} className='w-full p-3 border mb-4' placeholder='Message' required />
+                        </div>
+                        <div className='flex justify-center'>
+                            <button type="submit" className='bg-[#14279b] hover:bg-[#57aae1] text-white py-3 px-5 text-base rounded-full' >Send Message</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

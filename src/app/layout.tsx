@@ -2,6 +2,9 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import ScrollToTopButton from "@/commonComponents/ScrollToTopButton";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -24,7 +27,14 @@ export default function RootLayout({
         >
         </link>
       </head>
-      <body className={openSans.className}>{children}</body>
+      <body className={openSans.className}>
+        <Navbar />
+        <main className="flex flex-col items-center justify-between">
+          {children}
+        </main>
+        <Footer />
+        <ScrollToTopButton />
+      </body>
     </html>
   );
 }

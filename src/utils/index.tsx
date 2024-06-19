@@ -18,7 +18,7 @@ export const navOption = [
     {
         id: "services",
         lable: "Services",
-        path: "services",
+        path: "/#services",
     },
 ]
 
