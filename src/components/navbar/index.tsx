@@ -33,7 +33,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className={`text-[#14279b] bg-white w-full fixed transition-all duration-500 py-5 ${isScrolled ? 'header-scrolled ' : ''} ${navClick ? ' bg-[#090909e6] md:bg-white' : ''} z-10`}>
+        <div className={`text-[#14279b] bg-white w-full fixed transition-all duration-500 py-5 ${isScrolled ? 'header-scrolled ' : ''} ${navClick ? ' !bg-[#090909e6] md:!bg-white' : ''} z-10`}>
             <nav className={`max-w-screen-xl mx-auto pt-2 px-3 xl:px-0`}>
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
                     <a href="/" className="flex items-center">
@@ -57,7 +57,7 @@ export default function Navbar() {
                         }
                     </button>
 
-                    <div className={`items-center justify-between w-full md:flex md:w-auto mb-3 md:mb-0 ${navClick ? 'h-[100vh] md:h-auto rounded-md bg-white' : 'hidden'}`} id="navbar-user">
+                    <div className={`items-center justify-between w-full md:flex md:w-auto mb-3 md:mb-0 ${navClick ? 'h-[90vh] md:h-auto rounded-md bg-white' : 'hidden'}`} id="navbar-user">
                         <ul className={`flex flex-col font-medium p-4 md:p-0 mt-4  md:flex-row md:space-x-2  md:mt-0 md:border-0 `}>
                             {navOption.map(item => (
                                 <li key={item.id}>
